@@ -1,16 +1,21 @@
 import type { CollectionConfig } from 'payload/types'
 
-const Categories: CollectionConfig = {
+const Colours: CollectionConfig = {
   fields: [
     {
       name: 'title',
       type: 'text',
     },
     {
+        name: "category",
+        type: "text",
+        required: true,
+    },
+    {
       name:'logo',
       type:'upload',
       relationTo:'media'
-   },
+    },
     {
       name:'wallpapers',
       type:'relationship',
@@ -18,7 +23,7 @@ const Categories: CollectionConfig = {
       relationTo:'wallpapers'
   },
   ],
-  slug: 'categories',
+  slug: 'colours',
 }
 
-export default Categories
+export default Colours

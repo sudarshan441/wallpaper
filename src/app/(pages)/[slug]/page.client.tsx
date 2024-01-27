@@ -28,6 +28,8 @@ export const PageClient: React.FC<{
           initialPage.hero?.type === 'lowImpact'
         }
       />
+
+      <h1>hello</h1>
     </React.Fragment>
   )
 }

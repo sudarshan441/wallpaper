@@ -24,6 +24,8 @@ import { clearDBEndpoint, resetDBEndpoint, seedDBEndpoint } from './endpoints/re
 import { Footer } from './globals/Footer'
 import { Header } from './globals/Header'
 import { Settings } from './globals/Settings'
+import { wallpapers } from './collections/Wallpapers/Index'
+import Colours from './collections/Colours'
 
 const generateTitle: GenerateTitle = () => {
   return 'Payload Public Demo'
@@ -66,7 +68,7 @@ export default buildConfig({
       },
     }),
   },
-  collections: [Pages, Posts, Projects, Media, Categories, Users, Comments],
+  collections: [Pages, Posts, Projects, Media, Categories, Users, Comments, wallpapers, Colours],
   editor: lexicalEditor({}),
   endpoints: [resetDBEndpoint, seedDBEndpoint, clearDBEndpoint],
   globals: [Settings, Header, Footer],
